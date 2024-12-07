@@ -1,0 +1,255 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&dsiplay=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+}
+:root{
+    --main-color: #00ff55;
+    --second-color: #000000;
+    --gradient: linear-gradient(#000000,black, #00d71d);
+    --gradient2: linear-gradient(#00d71d,#00d71d,black);
+    --backg: #00d71d;
+}
+
+/* Custom Scroll Bar */
+html::-webkit-scrollbar{
+    width: 0.5rem;    
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--second-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 50px 100px;
+    background-color: var(--main-color);
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gradient);
+    padding: 15px 100px;
+}
+ 
+.logo {
+    width: 150px;
+    height: 150px; 
+    border: 2px solid white; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}   
+
+.navbar{
+    display: flex;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar a{
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar a::after{
+   content: "";
+   width: 0;
+   height: 3px;
+   background: var(--main-color);
+   position: absolute;
+   bottom: -4px;
+   left: 0;
+   transition: 0.4s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.header-btn a{
+    padding: 10px 15px;
+    background-color: #6e6e6e;
+    border-radius: 0.5rem;
+    color: white !important;
+    font-weight: 500;
+}
+
+.header-btn .contact:hover{
+    background-color: var(--second-color);
+    color: var(--main-color)!important;
+}
+
+.heading span{
+    color: var(--second-color);
+    text-decoration: underline;
+    font-size: 3rem!important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading h1{
+    font-size: 2.5rem;
+    letter-spacing: 2px; 
+    color: var(--second-color);
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--backg);
+  }
+  
+  .services .heading span {
+    color: var(--second-color);
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .services .heading h1 {
+    font-size: 36px;
+    margin: 10px 0 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  /* Service Boxes */
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .box-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .box h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin: 15px 0 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: var(--second-color);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--main-color);
+    color: var(--second-color);
+  }
+  
+  .typing-effect {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid transparent;
+      width: 0;
+      animation: typing-ltr 4s steps(40, end) infinite alternate, blink 0.5s step-end infinite;
+  }
+
+  @keyframes typing-ltr {
+      from {
+          width: 0;
+      }
+      to {
+          width: 100%;
+      }
+  }
+
+  @keyframes typing-rtl {
+      from {
+          width: 100%;
+      }
+      to {
+          width: 0;
+      }
+  }
+
+  @keyframes blink {
+      from {
+          border-color: transparent;
+      }
+      to {
+          border-color: transparent;
+      }
+  }
+
+  .copyright{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black!important;
+    background: var(--gradient2);
+}
+
+.social a{
+    color: white !important;
+    padding: 10px;
+    font-size: 21px;
+}
+
+.social a:hover{
+    color: var(--second-color)!important;
+}
+  
+
